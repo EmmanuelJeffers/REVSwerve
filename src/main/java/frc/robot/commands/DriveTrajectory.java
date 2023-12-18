@@ -49,7 +49,7 @@ public class DriveTrajectory extends SequentialCommandGroup {
         DriveConstants.kDriveKinematics,
 
         new PIDController(AutoConstants.kPXController, 0, 0),
-        new PIDController(AutoConstants.kPYController, 0, 0),
+        new PIDController(AutoConstants.kPYController, 0, 0),// no need for D and I controllers,P does the job
         thetaController,
         m_robotDrive::setModuleStates,
         m_robotDrive);
